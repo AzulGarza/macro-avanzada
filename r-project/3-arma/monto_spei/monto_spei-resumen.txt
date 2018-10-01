@@ -1,14 +1,24 @@
 
 \begin{tabular}{l|r|r}
 \hline
-Término & Coeficiente & Error estándar\\
+TÃ©rmino & Coeficiente & Error estÃ¡ndar\\
 \hline
-ar1 & 0.9087828 & 0.1450771\\
+ar1 & -0.8113793 & 0.0168104\\
 \hline
-ma1 & -1.7330409 & 0.1465590\\
+ar2 & -0.6891692 & 0.0215654\\
 \hline
-ma2 & 0.7494315 & 0.1215749\\
+ar3 & -0.5495009 & 0.0241923\\
 \hline
-drift & 0.0010121 & 0.0006079\\
+ar4 & -0.4415732 & 0.0254829\\
+\hline
+ar5 & -0.3718600 & 0.0258050\\
+\hline
+ar6 & -0.2952623 & 0.0254755\\
+\hline
+ar7 & -0.2409009 & 0.0242211\\
+\hline
+ar8 & -0.1625115 & 0.0216104\\
+\hline
+ar9 & -0.0785401 & 0.0168618\\
 \hline
 \end{tabular}

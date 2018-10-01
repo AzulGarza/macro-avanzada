@@ -1,7 +1,7 @@
 
 \begin{tabular}{l|r|r}
 \hline
-Término & Coeficiente & Error estándar\\
+TÃ©rmino & Coeficiente & Error estÃ¡ndar\\
 \hline
 ar1 & 0.3083051 & 0.2511964\\
 \hline

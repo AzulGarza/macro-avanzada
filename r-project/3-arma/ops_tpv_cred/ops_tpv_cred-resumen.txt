@@ -1,12 +1,20 @@
 
 \begin{tabular}{l|r|r}
 \hline
-Término & Coeficiente & Error estándar\\
+TÃ©rmino & Coeficiente & Error estÃ¡ndar\\
 \hline
-ar1 & -0.3327718 & 0.1349950\\
+ar1 & -0.9999100 & 0.1557462\\
 \hline
-ma1 & -1.7556702 & 0.1979278\\
+ar2 & -0.7819391 & 0.1727117\\
 \hline
-ma2 & 0.9518148 & 0.1913687\\
+ar3 & -0.7246096 & 0.1364885\\
+\hline
+ma1 & -0.9459926 & 0.2340442\\
+\hline
+ma2 & -0.0547227 & 0.4222994\\
+\hline
+ma3 & 0.3774264 & 0.3109765\\
+\hline
+intercept & -0.0004059 & 0.0009187\\
 \hline
 \end{tabular}

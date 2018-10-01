@@ -1,10 +1,10 @@
 
 \begin{tabular}{l|r|r}
 \hline
-Término & Coeficiente & Error estándar\\
+TÃ©rmino & Coeficiente & Error estÃ¡ndar\\
 \hline
-ar1 & -0.3873075 & 0.1367935\\
+ar1 & -0.3873805 & 0.1367675\\
 \hline
-ma1 & -0.9160213 & 0.0993514\\
+ma1 & -0.9151218 & 0.0996659\\
 \hline
 \end{tabular}

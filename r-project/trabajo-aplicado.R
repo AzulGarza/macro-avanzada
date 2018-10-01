@@ -149,6 +149,14 @@ crear_arma <- function(nombre_serie){
     file_plot %>% 
     str_replace(".png", "-resumen.txt")
   
+  file_ajustada <- 
+    file_plot %>% 
+    str_replace(".png", "-ajustada.png")
+  
+  file_pred <- 
+    file_plot %>% 
+    str_replace(".png", "-prediccion.png")
+  
   main_plot <- 
     str_c(
       "Diagnóstico serie estacionaria (logs): ",
@@ -158,9 +166,7 @@ crear_arma <- function(nombre_serie){
   
   # Serie a estudiar
   
-  serie_original <- series_estables[[nombre_serie]][["serie_original"]]
   serie <- series_estables[[nombre_serie]][["serie_diferenciada"]]
-  diferencias <- series_estables[[nombre_serie]][["resumen"]][["diferencias"]]
   
   
   # Gráficas de los diagnósticos
@@ -178,23 +184,26 @@ crear_arma <- function(nombre_serie){
   
   # Modelo ARMA
   arma <- 
-    serie_original %>% 
-    auto.arima(max.p = 10, max.q = 10, d = diferencias)
+    serie %>% 
+    auto.arima(max.p = 10, max.q = 10, d = 0)
   
   arma_order <- arimaorder(arma)
   
-  main_residuals  <- 
-    "Residuos de " %>% 
+  main_model <- 
     str_c(
       "ARMA(", 
-      arma["p"],
+      arma_order["p"],
       ",",
-      arma["q"],
+      arma_order["q"],
       ") ",
       "de ",
       nombre_serie,
       sep = ""
     )
+  
+  main_residuals  <- 
+    "Residuos de " %>% 
+    str_c(., main_model, sep = "")
   
   if(sum(arma_order) > 1){
     arma %>% 
@@ -214,12 +223,58 @@ crear_arma <- function(nombre_serie){
   print(
     checkresiduals(
       arma,
-      title = main_residuals
+      main = main_residuals
     )
   )
   
   dev.off()
   
+  # Si el modelo es 0 entonces se acaba
+  if(sum(arma_order) < 1){
+    return(NULL)
+  }
+  
+  # Gráfica de ajustada vs real
+  
+  ajustada <- 
+    arma$fitted %>%
+    xts(order.by = index(serie))
+  
+  plt_a <- 
+    plot(
+      serie, 
+      main = nombre_serie
+    )
+  
+  plt_a <- addSeries(ajustada, main = main_model, col = "blue")
+  
+  png(filename = file_ajustada, width = 900, height = 0.68*900)
+  
+  print(
+    plt_a
+  )
+  
+  dev.off()
+  
+  # Gráfica de la predicción
+  
+  main_pred <- 
+    "Predicción de " %>% 
+    str_c(., main_model, sep = "")
+  
+  plt_pred <- 
+    autoplot(
+      forecast(arma, h = 10),
+      include = 100, ylab = "", main = main_pred
+    )
+  
+  png(filename = file_pred, width = 900, height = 0.68*900)
+  
+  print(
+    plt_pred
+  )
+  
+  dev.off()
 }
 
 crear_modelos_arma <- function(){
