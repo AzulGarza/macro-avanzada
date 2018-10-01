@@ -1,0 +1,8 @@
+
+\begin{tabular}{l|r|r}
+\hline
+Término & Coeficiente & Error estándar\\
+\hline
+intercept & 0.0423358 & 0.0133302\\
+\hline
+\end{tabular}

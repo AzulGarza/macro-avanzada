@@ -1,0 +1,181 @@
+
+# Seires banxico ----------------------------------------------------------
+
+
+# paquetes ----------------------------------------------------------------
+
+pacman::p_load(tidyverse, banxicoR, skimr)
+
+
+# data --------------------------------------------------------------------
+
+series_diarias <- 
+  list(
+    ops_spei = "SF316454",
+    monto_spei = "SF316455",
+    ops_tef = "SF316143",
+    monto_tef = "SF316144"
+  )
+
+series_trim <- 
+  list(
+    ops_tpv_deb = "SF62273",
+    monto_tpv_deb = "SF62279",
+    ops_tpv_cred = "SF62274",
+    monto_tpv_cred = "SF62280",
+    ops_domis = "SF62182",
+    monto_domis = "SF62183",
+    tar_ut_deb = "SF61873",
+    tar_ut_cred = "SF61870",
+    ops_ret_deb = "SF62270",
+    monto_ret_deb = "SF62276",
+    ops_ret_cred = "SF62271",
+    monto_ret_cred = "SF62277",
+    ops_cheques = "SF61604",
+    monto_cheques = "SF61610"
+  )
+
+
+# functions ---------------------------------------------------------------
+
+limpiar_datos <- function(lista_datos){
+  datos <- 
+    lista_datos %>% 
+    map(~banxico_series(.)) %>% 
+    reduce(left_join, "Dates")
+  
+  colnames(datos) <- c("fecha", names(lista_datos))
+  
+  return(datos)
+  
+}
+
+resumen_sin_fecha <- function(datos, nombre_variables, nombre_cols){
+  datos %>% 
+    filter(! variable %in% c("fecha")) %>% 
+    select(
+      variable, mean, sd
+    ) %>% 
+    mutate(
+      variable = nombre_variables
+    ) %>% 
+    mutate_at(vars(-variable), as.numeric) %>% 
+    knitr::kable(
+      format = "latex", 
+      col.names = nombre_cols, 
+      align = 'lrr', escape = T, 
+      format.args = list(big.mark = ","),
+      caption = "Elaboración propia con datos de Banco de México"
+    )
+}
+
+resumen_fecha <- function(datos, leyenda, periodicidad){
+  
+  datos %>% 
+    filter(variable == "fecha") %>% 
+    select(min, max, n) %>% 
+    gather() %>% 
+    mutate(
+      key = case_when(
+        key == "min" ~ "Fecha inicial",
+        key == "max" ~ "Fecha final",
+        T ~ "Número de observaciones"
+      )
+    ) %>% 
+    add_row(
+      key = "Periodicidad de información", 
+      value = periodicidad, .before = T
+    ) %>% 
+    knitr::kable(
+      format = "latex", 
+      col.names = NULL,
+      align = 'lr',
+      caption = leyenda
+    )
+}
+
+col_names_sin_fecha <- 
+  c(
+    "Variable", "Media", "Desviación estándar"
+  )
+
+
+# datos diarios -----------------------------------------------------------
+
+
+datos_diarios <- limpiar_datos(series_diarias)
+
+skim_diarios <- 
+  datos_diarios %>% 
+  skim_to_wide()  
+
+variable_diarios <- 
+  c(
+    "Monto SPEI", "Monto TEF", 
+    "Operaciones SPEI", "Operaciones TEF"
+  )
+  
+resumen_sin_fecha(skim_diarios, variable_diarios, col_names_sin_fecha)
+
+resumen_fecha(
+  skim_diarios, 
+  "Descripción de la información diaria",
+  "diaria"
+)
+
+datos_diarios %>% 
+  gather(variable, valor, -fecha) %>% 
+  ggplot(aes(fecha, valor, group = variable)) + 
+  geom_line() + 
+  facet_wrap(~ variable, ncol = 2, scales = "free") + 
+  theme(
+    axis.ticks = element_blank(),
+    axis.title = element_blank(),
+    axis.text.y = element_blank(), 
+    panel.background = element_blank()
+  )
+
+# datos trimestrales ------------------------------------------------------
+
+
+datos_trim <- limpiar_datos(series_trim)
+
+skim_trim <- 
+  datos_trim %>% 
+  skim_to_wide()
+ 
+variable_trim <- 
+  c(
+    "Monto cheques", "Monto domiciliaciones", "Monto de retiros crédito",
+    "Monto retiros débito", "Monto TPV crédito", "Monto TPV débito",
+    "Número cheques", "Número domiciliaciones", 
+    "Número de retiros crédito", "Número de retiros débito",
+    "Operaciones TPV crédito", "Operaciones TPV débito",
+    "Tarjetas utilizadas crédito", "Tarjetas utilizadas débito"
+  )
+
+resumen_sin_fecha(skim_trim, variable_trim, col_names_sin_fecha)
+
+resumen_fecha(
+  skim_trim, 
+  "Descripción de la información trimestral",
+  "trimestral"
+)
+
+
+# gráficas ----------------------------------------------------------------
+
+datos_trim %>% 
+  gather(variable, valor, -fecha) %>% 
+  ggplot(aes(fecha, valor, group = variable)) + 
+  geom_line() +
+  facet_wrap(~variable, scales = "free") + 
+  theme(
+    axis.ticks = element_blank(),
+    axis.title = element_blank(),
+    axis.text.y = element_blank(), 
+    panel.background = element_blank()
+  )
+  
+
+

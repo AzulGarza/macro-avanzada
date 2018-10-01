@@ -1,0 +1,99 @@
+# Modelos incondicionales
+
+
+# Paquetes ----------------------------------------------------------------
+
+pacman::p_load(tidyverse, banxicoR, xts, zoo, tseries)
+
+source(here::here("load-data.R")) # Esto carga las bases de datos
+
+
+# Funciones útiles --------------------------------------------------------
+
+estabilizar <- function(serie, retraso_adf){
+  # Dicky Fuller
+  adf_list <- adf.test(na.omit(serie), alternative = "s", k = retraso_adf)
+  p_value_adf <- adf_list$p.value
+  
+  # Tendencia determinística
+  time <- 1:nrow(serie)
+  summary_time <- summary(lm(serie ~ time))
+  p_value_det <- summary_time$coefficients[2, 4]
+  
+  # Variables de utilidad
+  ts <- serie
+  n_diffs <- 0
+  while(p_value_adf > 0.01 | p_value_det < 0.01){
+    # Si existe alguna tendencia, diferenciamos
+    ts <- diff.xts(ts, differences = 1)
+    n_diffs <- n_diffs + 1
+    
+    # DF
+    adf_list <- adf.test(na.omit(ts), alternative = "s", k = retraso_adf)
+    p_value_adf <- adf_list$p.value
+    
+    #Determinista
+    time <- 1:nrow(ts)
+    summary_time <- summary(lm(ts ~ time))
+    p_value_det <- summary_time$coefficients[2, 4]
+  }
+  
+  resumen <- 
+    tibble(
+      diferencias = n_diffs, 
+      retrasos = retraso_adf,
+      p_val_adf = p_value_adf,
+      p_val_det = p_value_det,
+      media = mean(ts, na.rm = T),
+      desv_est = sd(ts, na.rm = T)
+    )
+  
+  list_r <- 
+    list(
+      serie_diferenciada = ts,
+      resumen = resumen
+    )
+  
+  return(list_r)
+}
+
+grafica_tabla <- function(serie, retraso_adf, main_plot){
+  # Plot no estable
+  file_plot <- here::here("modelos-incondicionales", paste0(main_plot,"-no-est", ".png"))
+  png(filename = file_plot, width = 900, height = 0.68*900)
+  print(plot(serie, main = main_plot))
+  dev.off()
+  # Estable
+  estable <- estabilizar(serie, retraso_adf)
+  # Plot
+  file_plot <- here::here("modelos-incondicionales", paste0(main_plot, ".png"))
+  png(filename = file_plot, width = 900, height = 0.68*900)
+  print(plot(estable$serie_diferenciada, main = main_plot))
+  dev.off()
+  # Tabla
+  file_tabla <- here::here("modelos-incondicionales", "tablas.txt")
+  cat(paste0("tabla ", main_plot, ":"), file = file_tabla, append = T)
+  cat(knitr::kable(estable$resumen, "latex", digits = 2), file = file_tabla, append = T)
+  cat("\n", file = file_tabla, append = T)
+  cat("\n", file = file_tabla, append = T)
+}
+
+# análisis ----------------------------------------------------------------
+
+file.create(here::here("modelos-incondicionales", "tablas.txt"))
+
+index <- index(datos_diarios)
+
+map2(
+  as_tibble(datos_diarios),
+  names(datos_diarios),
+  ~grafica_tabla(as.xts(.x, index), 300, .y)
+)
+
+index_trim <- index(datos_trim)
+
+map2(
+  as_tibble(datos_trim),
+  names(datos_trim),
+  ~grafica_tabla(as.xts(.x, index_trim), 4, .y)
+  )

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1537233938604.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2401616718",
+    "id" : "F9A65C33",
+    "lastKnownWriteTime" : 1537247150,
+    "last_content_update" : 1537247150666,
+    "path" : "/media/fede/FEDE/projects/macroeconometria-avanzada/modelos-incondicionales.R",
+    "project_path" : "modelos-incondicionales.R",
+    "properties" : {
+        "cursorPosition" : "99,0",
+        "scrollLine" : "81",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

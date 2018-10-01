@@ -1,0 +1,18 @@
+
+\begin{tabular}{l|r|r}
+\hline
+Término & Coeficiente & Error estándar\\
+\hline
+ar1 & 0.1382191 & 0.1251976\\
+\hline
+ar2 & -0.0925779 & 0.1101218\\
+\hline
+ar3 & -0.4077324 & 0.0972959\\
+\hline
+ar4 & 0.3938462 & 0.1102432\\
+\hline
+ar5 & -0.3678695 & 0.1227421\\
+\hline
+intercept & 0.0183920 & 0.0016778\\
+\hline
+\end{tabular}

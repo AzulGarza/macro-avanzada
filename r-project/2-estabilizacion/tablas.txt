@@ -1,0 +1,225 @@
+tabla ops_spei:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 30 & 0.01 & 0.58 & 0 & 0.27\\
+\hline
+\end{tabular}
+
+tabla monto_spei:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 30 & 0.01 & 0.71 & 0 & 0.26\\
+\hline
+\end{tabular}
+
+tabla ops_tef:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 30 & 0.01 & 0.93 & 0 & 0.29\\
+\hline
+\end{tabular}
+
+tabla monto_tef:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 30 & 0.01 & 0.99 & 0 & 0.26\\
+\hline
+\end{tabular}
+
+tabla tiie_28:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 30 & 0.01 & 0.97 & 0 & 0.01\\
+\hline
+\end{tabular}
+
+tabla ops_tpv_deb:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 4 & 0.01 & 0.97 & 0 & 0.1\\
+\hline
+\end{tabular}
+
+tabla monto_tpv_deb:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 4 & 0.01 & 0.99 & 0 & 0.18\\
+\hline
+\end{tabular}
+
+tabla ops_tpv_cred:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+3 & 4 & 0.01 & 0.76 & 0.01 & 0.2\\
+\hline
+\end{tabular}
+
+tabla monto_tpv_cred:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 4 & 0.01 & 0.78 & 0 & 0.16\\
+\hline
+\end{tabular}
+
+tabla ops_domis:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 4 & 0.01 & 0.04 & 0.04 & 0.11\\
+\hline
+\end{tabular}
+
+tabla monto_domis:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 4 & 0.01 & 0.01 & 0.07 & 0.16\\
+\hline
+\end{tabular}
+
+tabla tar_ut_deb:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+3 & 4 & 0.01 & 0.82 & 0 & 0.06\\
+\hline
+\end{tabular}
+
+tabla tar_ut_cred:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+3 & 4 & 0.01 & 0.61 & 0 & 0.08\\
+\hline
+\end{tabular}
+
+tabla ops_ret_deb:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 4 & 0.01 & 0.85 & 0 & 0.08\\
+\hline
+\end{tabular}
+
+tabla monto_ret_deb:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 4 & 0.01 & 0.96 & 0 & 0.14\\
+\hline
+\end{tabular}
+
+tabla ops_ret_cred:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+3 & 4 & 0.01 & 0.76 & 0 & 0.18\\
+\hline
+\end{tabular}
+
+tabla monto_ret_cred:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+3 & 4 & 0.01 & 0.8 & 0 & 0.22\\
+\hline
+\end{tabular}
+
+tabla ops_cheques:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 4 & 0.01 & 0.81 & 0 & 0.11\\
+\hline
+\end{tabular}
+
+tabla monto_cheques:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 4 & 0.01 & 0.56 & 0 & 0.09\\
+\hline
+\end{tabular}
+
+tabla pib:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 4 & 0.01 & 0.66 & 0.02 & 0.03\\
+\hline
+\end{tabular}
+
+tabla inpc:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 12 & 0.01 & 0.86 & 0 & 0.01\\
+\hline
+\end{tabular}
+
+tabla palabraspei:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 12 & 0.01 & 0.74 & 0.05 & 1.65\\
+\hline
+\end{tabular}
+
+tabla palabratef:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 12 & 0.01 & 0.9 & 0 & 1.32\\
+\hline
+\end{tabular}
+
+tabla palabratpv:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 12 & 0.01 & 0.66 & 0.05 & 1.96\\
+\hline
+\end{tabular}
+
+tabla palabratransferenciaspei:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+1 & 12 & 0.01 & 0.87 & 0.05 & 1.98\\
+\hline
+\end{tabular}
+

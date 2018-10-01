@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1537388171724.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2780922701",
+    "id" : "99A4BC49",
+    "lastKnownWriteTime" : 1537246927,
+    "last_content_update" : 1537246927,
+    "path" : "C:/Users/Ricardo/Dropbox/Proyecto/r-project/load-data.R",
+    "project_path" : "load-data.R",
+    "properties" : {
+        "cursorPosition" : "4,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

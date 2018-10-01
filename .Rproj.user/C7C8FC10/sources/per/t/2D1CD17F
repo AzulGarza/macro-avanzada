@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1537234440405.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2780922701",
+    "id" : "2D1CD17F",
+    "lastKnownWriteTime" : 1537236620,
+    "last_content_update" : 1537236620767,
+    "path" : "/media/fede/FEDE/projects/macroeconometria-avanzada/load-data.R",
+    "project_path" : "load-data.R",
+    "properties" : {
+        "cursorPosition" : "3,37",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

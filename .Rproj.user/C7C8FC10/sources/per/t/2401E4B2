@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1537233885795.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1224092776",
+    "id" : "2401E4B2",
+    "lastKnownWriteTime" : 1536742840,
+    "last_content_update" : 1536742840,
+    "path" : "/media/fede/FEDE/projects/macroeconometria-avanzada/medios-pago-series.R",
+    "project_path" : "medios-pago-series.R",
+    "properties" : {
+        "cursorPosition" : "247,40",
+        "scrollLine" : "242"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

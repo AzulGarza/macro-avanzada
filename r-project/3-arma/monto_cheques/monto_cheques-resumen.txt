@@ -1,0 +1,14 @@
+
+\begin{tabular}{l|r|r}
+\hline
+Término & Coeficiente & Error estándar\\
+\hline
+ar1 & 0.3083051 & 0.2511964\\
+\hline
+ar2 & -0.4335546 & 0.1642186\\
+\hline
+ma1 & -1.1138987 & 0.2677561\\
+\hline
+ma2 & 0.5517477 & 0.1769571\\
+\hline
+\end{tabular}

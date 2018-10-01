@@ -1,0 +1,132 @@
+---
+title: "trabajo final"
+author: "Federico Garza"
+date: "4 de septiembre de 2018"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, include = T, warning = F, message = F, fig.width = 6, fig.asp = 0.618, dpi = 1000)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r paqs}
+pacman::p_load(tidyverse, ggplot2, lubridate)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r data}
+spei <- read_csv("serie-spei.csv")
+
+spei_m <- 
+  spei %>% 
+  na_if("N/E") %>% 
+  mutate_at(vars(contains("enviadas")), as.numeric) %>% 
+  mutate_at(vars(fecha), ~dmy(str_replace_all(., "/", "-"))) %>% 
+  select(fecha, contains("enviadas")) %>% 
+  gather(variable, value, -fecha) 
+```
+
+```{r plot_spei_f}
+plot_spei <- function(type_var, title, title_y, length_out, label){
+  data_plot <- 
+    spei_m %>%
+    group_by(yr = year(fecha), mth = month(fecha), variable) %>% 
+    summarise_if(is.numeric, sum) %>% 
+    ungroup() %>% 
+    mutate(fecha = ymd(str_c(yr, mth, "01", sep = "-"))) %>% 
+    filter(!str_detect(variable, type_var)) 
+  
+  max_dp <- 
+    data_plot %>% 
+    pull(value) %>% 
+    max(na.rm = T)
+  
+  data_plot %>% 
+    ggplot(aes(fecha, value/1e6, group = variable)) + 
+    geom_line(aes(color = factor(variable))) +
+    expand_limits(x = ymd("2020-01-01")) +
+    geom_text(
+      data = . %>% filter(str_detect(variable, "enviadas")) %>% tail(1),
+      aes(fecha, value/1e6, label = label, vjust = 0.5),
+      hjust = -0.02,
+      size = 3,
+      color = "#619CFF"
+    )+
+    # geom_text(
+    #   data = . %>% filter(str_detect(variable, "recibidas")) %>% tail(1),
+    #   aes(fecha, value/1e6, label = "Recibidas", vjust = 0.5),
+    #   hjust = -0.02,
+    #   size = 3,
+    #   color = "#619CFF"
+    # )+
+    labs(
+      title = title,
+      x = "Año",
+      y = title_y,
+      caption = "Fuente: Banco de México"
+    )+
+    theme(
+      legend.position = "none",
+      panel.background = element_blank(),
+      axis.title = element_text(size = 9),
+      axis.title.x = element_blank(),
+      axis.title.y = element_text(angle = 0, vjust = 0.97, hjust = 1, size = 8, color = "#b2b2b2"),
+      axis.line = element_line(size = 0.5, color = "gray"),
+      axis.ticks = element_blank(),
+      axis.text = element_text(color = "#b2b2b2", size = 8),
+      axis.line.x = element_line(color = "#b2b2b2"),
+      axis.line.y = element_blank(),
+      plot.caption = element_text(color = "#b2b2b2", size = 6)
+    )+ 
+    scale_color_manual(values = c("#619CFF"))+
+    scale_x_date(
+      #breaks = 2004:2020,
+      date_breaks = "1 year",
+      labels = scales::date_format("%Y")
+    ) +
+    scale_y_continuous(
+      breaks = round(seq(0, round(max_dp/1e6), length.out = length_out))
+      #labels = scales::dollar_format(prefix = "$")
+    )
+    
+
+  }
+```
+
+
+```{r spei_monto}
+plot_spei(
+  "monto",
+  "El monto de las transferencias en el SPEI ha\nseguido una tendencia exponencial",
+  "Millones de\npesos\nmensuales",
+  8,
+  "Monto de las\ntransferencias"
+)   
+
+ggsave("monto-spei.png", width = 20, height = 0.618*20, units = "cm")
+```
+
+```{r spei_numero}
+plot_spei(
+  "numero",
+  "El número de las transferencias en el SPEI ha\nseguido una tendencia creciente",
+  "Millones de\noperaciones\nmensuales",
+  9,
+  "Número de\ntransferencias"
+)   
+
+ggsave("numero-spei.png", width = 20, height = 0.618*20, units = "cm")
+```
+
+

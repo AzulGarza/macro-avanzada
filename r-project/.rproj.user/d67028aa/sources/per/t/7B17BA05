@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1537388002937.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1224092776",
+    "id" : "7B17BA05",
+    "lastKnownWriteTime" : 1537246934,
+    "last_content_update" : 1537246934,
+    "path" : "C:/Users/Ricardo/Dropbox/Proyecto/r-project/medios-pago-series.R",
+    "project_path" : "medios-pago-series.R",
+    "properties" : {
+        "cursorPosition" : "137,0",
+        "scrollLine" : "129"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
