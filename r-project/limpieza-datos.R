@@ -10,6 +10,22 @@ carpeta <- here::here("data", "raw-data")
 
 # datos -------------------------------------------------------------------
 
+# Indice delictivo
+delictivo <- 
+  data.table::fread(
+    file.path(carpeta, "indice-delitos.csv")
+  ) %>% 
+  mutate_at(vars(index_delictivo), as.numeric) %>% 
+  xts(
+    pull(., index_delictivo), 
+    order.by = as.Date(pull(., fecha), "%d/%m/%y")
+  ) %>% 
+  .[,2]
+
+delictivo$delictivo <- as.numeric(delictivo$index_delictivo)  
+
+delictivo <- delictivo[,2]
+
 # Datos obtenidos
 datos_busqueda <-
   list.files(carpeta, pattern = "^busqueda", full.names = T) %>% 
@@ -110,6 +126,8 @@ limpiar_datos_ahora <- function(file_name){
   
   series$busqueda <-datos_busqueda
   
+  series$delictivo <- delictivo
+  
   
   series %>% 
     saveRDS(file_name)
@@ -118,9 +136,9 @@ limpiar_datos_ahora <- function(file_name){
 }
 
 # Limpiando
-
-limpiar_datos_ahora(here::here("data", "series.RDS"))
-
+beepr::beep_on_error(
+  limpiar_datos_ahora(here::here("data", "series.RDS"))
+)
 # finally -----------------------------------------------------------------
 
 rm(list = ls())

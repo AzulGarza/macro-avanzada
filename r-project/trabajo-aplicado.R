@@ -85,11 +85,14 @@ grafica_tabla <- function(serie, retraso_adf, main_plot){
 }
 
 estabilizar_series <- function(){
-  dir.create(here::here("2-estabilizacion"))
-  file.create(here::here("2-estabilizacion", "tablas.txt"))
+  dir <- here::here("2-estabilizacion")
+  if(!dir.exists(dir)){
+    dir.create(dir)
+  }
+  file.create(file.path(dir, "tablas.txt"))
   lista_datos %>% 
     map2(
-      c(30, 4, 12, 12),
+      c(30, 4, 12, 12, 12),
       function(datos, periodo_diff){
         
         index <- index(datos)

@@ -223,3 +223,12 @@ diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
 \hline
 \end{tabular}
 
+tabla delictivo:
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+diferencias & retrasos & p\_val\_adf & p\_val\_det & media & desv\_est\\
+\hline
+2 & 12 & 0.01 & 0.82 & 0 & 0.09\\
+\hline
+\end{tabular}
+
