@@ -1,0 +1,18 @@
+Especificación: 
+ 
+ops_cheques~delictivo+tiie_28+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma2 & -0.9999970 & 0.0849443 & -11.772386 & 0.00e+00\\
+\hline
+intercept & -0.3930287 & 0.0993626 & -3.955498 & 7.64e-05\\
+\hline
+ops\_cheques3 & 1.0194865 & 0.0053814 & 189.445168 & 0.00e+00\\
+\hline
+\end{tabular}

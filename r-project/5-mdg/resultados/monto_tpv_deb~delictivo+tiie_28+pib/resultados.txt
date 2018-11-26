@@ -1,0 +1,18 @@
+Especificación: 
+ 
+monto_tpv_deb~delictivo+tiie_28+pib 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma1 & 0.6474506 & 0.0899101 & 7.201085 & 0\\
+\hline
+intercept & -33.7114564 & 1.0466035 & -32.210343 & 0\\
+\hline
+pib1 & 2.7333320 & 0.0634660 & 43.067649 & 0\\
+\hline
+\end{tabular}

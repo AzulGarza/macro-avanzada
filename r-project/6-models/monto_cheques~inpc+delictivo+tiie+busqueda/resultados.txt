@@ -1,0 +1,110 @@
+Modelo: monto_cheques~inpc+delictivo+tiie+busqueda
+ mdg : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma3 & -0.3963178 & 0.1031351 & -3.8427056 & 0.0001217\\
+\hline
+ma4 & -0.6154231 & 0.1225002 & -5.0238551 & 0.0000005\\
+\hline
+intercept & 6.4416345 & 1.0301817 & 6.2529110 & 0.0000000\\
+\hline
+inpc & -0.3568633 & 0.7282257 & -0.4900448 & 0.6241022\\
+\hline
+delictivo & -0.0247662 & 0.0381099 & -0.6498630 & 0.5157807\\
+\hline
+tiie & 0.0553503 & 0.0101198 & 5.4695136 & 0.0000000\\
+\hline
+busqueda & -0.0516984 & 0.0342058 & -1.5113919 & 0.1306886\\
+\hline
+lag(monto\_cheques, 4) & 0.6840001 & 0.0573183 & 11.9333578 & 0.0000000\\
+\hline
+lag(inpc, 1) & -2.0311827 & 0.6943230 & -2.9254145 & 0.0034400\\
+\hline
+lag(inpc, 3) & 2.0775500 & 0.5405926 & 3.8430973 & 0.0001215\\
+\hline
+\end{tabular}
+
+ mdgd : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma4 & -1.0000602 & 0.1336438 & -7.4830277 & 0.0000000\\
+\hline
+intercept & 17.8398681 & 0.4598045 & 38.7988120 & 0.0000000\\
+\hline
+inpc & -0.9519035 & 0.0549301 & -17.3293494 & 0.0000000\\
+\hline
+delictivo & 0.0857613 & 0.0306030 & 2.8023777 & 0.0050727\\
+\hline
+tiie & -0.0051277 & 0.0286521 & -0.1789640 & 0.8579660\\
+\hline
+busqueda & -0.0028090 & 0.0302842 & -0.0927543 & 0.9260988\\
+\hline
+lag(c(NA, diff(monto\_cheques)), 3) & -0.3888237 & 0.0242002 & -16.0669744 & 0.0000000\\
+\hline
+lag(c(NA, diff(inpc)), 0) & 2.6190401 & 0.4312279 & 6.0734477 & 0.0000000\\
+\hline
+lag(c(NA, diff(inpc)), 3) & 3.8793693 & 0.4521641 & 8.5795605 & 0.0000000\\
+\hline
+lag(c(NA, diff(delictivo)), 2) & -0.4334723 & 0.1413018 & -3.0677062 & 0.0021571\\
+\hline
+\end{tabular}
+
+ mce : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma4 & -0.9999967 & 0.1172257 & -8.5305238 & 0.0000000\\
+\hline
+intercept & 14.5243235 & 1.0030385 & 14.4803257 & 0.0000000\\
+\hline
+lag(monto\_cheques, 1) & -0.7975199 & 0.0502494 & -15.8712397 & 0.0000000\\
+\hline
+lag(inpc, 1) & -0.8185674 & 0.0825989 & -9.9101507 & 0.0000000\\
+\hline
+lag(delictivo, 1) & 0.0715716 & 0.0141712 & 5.0505118 & 0.0000004\\
+\hline
+lag(tiie, 1) & 0.0008625 & 0.0083607 & 0.1031574 & 0.9178380\\
+\hline
+lag(busqueda, 1) & -0.0180033 & 0.0260646 & -0.6907183 & 0.4897426\\
+\hline
+lag(c(NA, diff(monto\_cheques)), 3) & -0.4282340 & 0.0206296 & -20.7582084 & 0.0000000\\
+\hline
+lag(c(NA, diff(inpc)), 3) & 5.0783329 & 0.3576569 & 14.1988943 & 0.0000000\\
+\hline
+lag(c(NA, diff(delictivo)), 2) & -0.5093547 & 0.1353331 & -3.7637105 & 0.0001674\\
+\hline
+lag(c(NA, diff(tiie)), 0) & 0.2378224 & 0.0568907 & 4.1803378 & 0.0000291\\
+\hline
+\end{tabular}
+
+ Comparación de modelos: 
+
+\begin{tabular}{l|r|r|r}
+\hline
+  & mdg & mdgd & mce\\
+\hline
+mdg & 0.00000 & 7.212048 & 5.477906\\
+\hline
+mdgd & 11.16002 & 0.000000 & 7.666634\\
+\hline
+mce & 10.56973 & 11.705719 & 0.000000\\
+\hline
+\end{tabular}
+ Resultados: 
+
+\begin{tabular}{l|l|l}
+\hline
+mdgd > mdg & mce > mdg & mce > mdgd\\
+\hline
+\end{tabular}

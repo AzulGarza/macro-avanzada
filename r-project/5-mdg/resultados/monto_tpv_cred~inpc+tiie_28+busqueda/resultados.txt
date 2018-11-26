@@ -1,0 +1,16 @@
+Especificación: 
+ 
+monto_tpv_cred~inpc+tiie_28+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 0.5364868 & 0.2994291 & 1.791699 & 0.0731812\\
+\hline
+monto\_tpv\_cred2 & 0.9565841 & 0.0260752 & 36.685659 & 0.0000000\\
+\hline
+\end{tabular}

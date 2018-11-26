@@ -1,0 +1,16 @@
+Especificación: 
+ 
+ops_cheques~inpc+delictivo+tiie_28+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 25.851434 & 0.2059846 & 125.50179 & 0\\
+\hline
+inpc3 & -1.730339 & 0.0477406 & -36.24459 & 0\\
+\hline
+\end{tabular}

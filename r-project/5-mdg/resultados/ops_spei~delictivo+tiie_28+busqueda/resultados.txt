@@ -1,0 +1,16 @@
+Especificación: 
+ 
+ops_spei~delictivo+tiie_28+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 1.5104958 & 0.2557629 & 5.905844 & 0\\
+\hline
+ops\_spei2 & 0.9157336 & 0.0152920 & 59.883117 & 0\\
+\hline
+\end{tabular}

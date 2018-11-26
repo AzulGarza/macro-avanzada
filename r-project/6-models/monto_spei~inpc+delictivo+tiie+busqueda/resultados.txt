@@ -1,0 +1,98 @@
+Modelo: monto_spei~inpc+delictivo+tiie+busqueda
+ mdg : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 3.0557761 & 1.2459420 & 2.4525830 & 0.0141835\\
+\hline
+inpc & -4.3850521 & 1.1020956 & -3.9788308 & 0.0000693\\
+\hline
+delictivo & -0.0154347 & 0.0563252 & -0.2740286 & 0.7840627\\
+\hline
+tiie & 0.1021279 & 0.0499339 & 2.0452606 & 0.0408292\\
+\hline
+busqueda & 0.0214119 & 0.0395811 & 0.5409644 & 0.5885321\\
+\hline
+lag(monto\_spei, 1) & 0.6711754 & 0.0945809 & 7.0963097 & 0.0000000\\
+\hline
+lag(inpc, 3) & 1.9977228 & 1.0187578 & 1.9609399 & 0.0498860\\
+\hline
+lag(inpc, 4) & 3.0230874 & 1.2946680 & 2.3350292 & 0.0195419\\
+\hline
+\end{tabular}
+
+ mdgd : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 2.9148131 & 1.3932204 & 2.0921407 & 0.0364259\\
+\hline
+inpc & 0.2523545 & 0.1933343 & 1.3052755 & 0.1917991\\
+\hline
+delictivo & -0.0593886 & 0.0620589 & -0.9569706 & 0.3385821\\
+\hline
+tiie & -0.0281119 & 0.0381508 & -0.7368636 & 0.4612053\\
+\hline
+busqueda & 0.0408329 & 0.0435741 & 0.9370902 & 0.3487121\\
+\hline
+lag(monto\_spei, 1) & 0.7976721 & 0.0957907 & 8.3272405 & 0.0000000\\
+\hline
+lag(c(NA, diff(inpc)), 1) & -2.2768222 & 1.0992316 & -2.0712853 & 0.0383321\\
+\hline
+\end{tabular}
+
+ mce : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma2 & -1.0000174 & 0.0897607 & -11.140931 & 0.0000000\\
+\hline
+intercept & 3.1650845 & 0.7677946 & 4.122306 & 0.0000375\\
+\hline
+lag(monto\_spei, 1) & -0.3014148 & 0.0503067 & -5.991544 & 0.0000000\\
+\hline
+lag(inpc, 1) & 0.5654895 & 0.0958056 & 5.902467 & 0.0000000\\
+\hline
+lag(delictivo, 1) & -0.0621080 & 0.0247768 & -2.506696 & 0.0121865\\
+\hline
+lag(tiie, 1) & 0.0754899 & 0.0191782 & 3.936245 & 0.0000828\\
+\hline
+lag(busqueda, 1) & 0.0393457 & 0.0260544 & 1.510136 & 0.1310086\\
+\hline
+lag(c(NA, diff(monto\_spei)), 2) & 0.7603269 & 0.0630344 & 12.062092 & 0.0000000\\
+\hline
+lag(c(NA, diff(inpc)), 1) & -4.2383357 & 1.1394113 & -3.719759 & 0.0001994\\
+\hline
+lag(c(NA, diff(delictivo)), 2) & -0.4586173 & 0.0919129 & -4.989696 & 0.0000006\\
+\hline
+\end{tabular}
+
+ Comparación de modelos: 
+
+\begin{tabular}{l|r|r|r}
+\hline
+  & mdg & mdgd & mce\\
+\hline
+mdg & 0.00000 & 37.69596 & 10.475589\\
+\hline
+mdgd & 12.84272 & 0.00000 & 8.488104\\
+\hline
+mce & 12.50593 & 44.98563 & 0.000000\\
+\hline
+\end{tabular}
+ Resultados: 
+
+\begin{tabular}{l|l|l}
+\hline
+mdg > mdgd & mce > mdg & mce > mdgd\\
+\hline
+\end{tabular}

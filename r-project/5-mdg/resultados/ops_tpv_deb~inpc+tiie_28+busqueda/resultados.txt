@@ -1,0 +1,18 @@
+Especificación: 
+ 
+ops_tpv_deb~inpc+tiie_28+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma1 & -0.6241157 & 0.1133744 & -5.504909 & 0.0000000\\
+\hline
+intercept & 0.2893054 & 0.0810842 & 3.567962 & 0.0003598\\
+\hline
+ops\_tpv\_deb2 & 0.9872080 & 0.0042712 & 231.133961 & 0.0000000\\
+\hline
+\end{tabular}

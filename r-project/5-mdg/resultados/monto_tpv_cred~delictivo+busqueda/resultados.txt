@@ -1,0 +1,18 @@
+Especificación: 
+ 
+monto_tpv_cred~delictivo+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma1 & 1.000000 & 0.1088501 & 9.18695 & 0.0000000\\
+\hline
+intercept & 0.304498 & 0.2114305 & 1.44018 & 0.1498166\\
+\hline
+monto\_tpv\_cred3 & 0.979909 & 0.0183851 & 53.29918 & 0.0000000\\
+\hline
+\end{tabular}

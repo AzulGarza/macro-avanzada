@@ -1,0 +1,22 @@
+Especificación: 
+ 
+ops_tpv_deb~delictivo+tiie_28+pib 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma2 & -0.4314464 & 0.1387779 & -3.1088979 & 0.0018779\\
+\hline
+intercept & -0.5258430 & 1.7748843 & -0.2962689 & 0.7670247\\
+\hline
+ops\_tpv\_deb2 & 0.9630674 & 0.0613764 & 15.6911792 & 0.0000000\\
+\hline
+pib1 & 1.4123428 & 0.1360596 & 10.3803252 & 0.0000000\\
+\hline
+pib2 & -1.3365865 & 0.2197783 & -6.0815226 & 0.0000000\\
+\hline
+\end{tabular}

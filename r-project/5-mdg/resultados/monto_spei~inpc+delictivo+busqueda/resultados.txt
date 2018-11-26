@@ -1,0 +1,16 @@
+Especificación: 
+ 
+monto_spei~inpc+delictivo+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 1.7218698 & 0.6116238 & 2.815243 & 0.004874\\
+\hline
+monto\_spei2 & 0.9026501 & 0.0350595 & 25.746216 & 0.000000\\
+\hline
+\end{tabular}

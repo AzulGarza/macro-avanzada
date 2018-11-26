@@ -1,0 +1,24 @@
+Especificación: 
+ 
+monto_tpv_cred~inpc+tiie_28+pib+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma2 & -0.5709100 & 0.1209241 & -4.721224 & 0.0000023\\
+\hline
+ma3 & -0.4337073 & 0.1169182 & -3.709494 & 0.0002077\\
+\hline
+intercept & -4.6464496 & NaN & NaN & NaN\\
+\hline
+monto\_tpv\_cred2 & 0.7282437 & NaN & NaN & NaN\\
+\hline
+pib1 & 2.1524152 & 0.1822435 & 11.810658 & 0.0000000\\
+\hline
+pib2 & -1.6812901 & 0.2054936 & -8.181715 & 0.0000000\\
+\hline
+\end{tabular}

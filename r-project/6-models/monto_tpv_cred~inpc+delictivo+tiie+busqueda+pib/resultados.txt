@@ -1,0 +1,128 @@
+Modelo: monto_tpv_cred~inpc+delictivo+tiie+busqueda+pib
+ mdg : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma1 & 0.4775699 & 0.2024571 & 2.3588695 & 0.0183307\\
+\hline
+ma3 & -1.3677433 & 0.2660099 & -5.1417012 & 0.0000003\\
+\hline
+intercept & -25.7783344 & 1.5127017 & -17.0412543 & 0.0000000\\
+\hline
+inpc & -0.3164602 & 0.6888486 & -0.4594045 & 0.6459437\\
+\hline
+delictivo & -0.0009507 & 0.0179252 & -0.0530384 & 0.9577013\\
+\hline
+tiie & 0.0316870 & 0.0224108 & 1.4139169 & 0.1573863\\
+\hline
+busqueda & -0.0125328 & 0.0213608 & -0.5867203 & 0.5573915\\
+\hline
+pib & 1.3376159 & 0.1945370 & 6.8758947 & 0.0000000\\
+\hline
+lag(inpc, 1) & -2.7044022 & 0.5610986 & -4.8198342 & 0.0000014\\
+\hline
+lag(inpc, 3) & 1.5437191 & 0.7038872 & 2.1931342 & 0.0282977\\
+\hline
+lag(busqueda, 1) & -0.0795455 & 0.0192615 & -4.1297699 & 0.0000363\\
+\hline
+lag(busqueda, 2) & -0.1023696 & 0.0175113 & -5.8459025 & 0.0000000\\
+\hline
+lag(pib, 2) & 0.6679651 & 0.2140228 & 3.1210002 & 0.0018024\\
+\hline
+lag(pib, 4) & 0.7100814 & 0.1402707 & 5.0622207 & 0.0000004\\
+\hline
+\end{tabular}
+
+ mdgd : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma1 & 0.4978954 & 0.1486619 & 3.3491798 & 0.0008105\\
+\hline
+intercept & -13.4843940 & 1.7669512 & -7.6314469 & 0.0000000\\
+\hline
+inpc & -0.6010483 & 0.3310933 & -1.8153440 & 0.0694711\\
+\hline
+delictivo & -0.0522307 & 0.0451733 & -1.1562293 & 0.2475874\\
+\hline
+tiie & 0.0173422 & 0.0297617 & 0.5827036 & 0.5600929\\
+\hline
+busqueda & -0.0834554 & 0.0459589 & -1.8158703 & 0.0693903\\
+\hline
+pib & 1.4745116 & 0.1592791 & 9.2574069 & 0.0000000\\
+\hline
+lag(monto\_tpv\_cred, 1) & 0.3691916 & 0.0764157 & 4.8313571 & 0.0000014\\
+\hline
+lag(c(NA, diff(monto\_tpv\_cred)), 3) & -0.1570300 & 0.0509077 & -3.0846044 & 0.0020382\\
+\hline
+lag(c(NA, diff(inpc)), 3) & 1.9604701 & 0.6590007 & 2.9749133 & 0.0029307\\
+\hline
+lag(c(NA, diff(busqueda)), 0) & 0.1444736 & 0.0375444 & 3.8480754 & 0.0001190\\
+\hline
+lag(c(NA, diff(busqueda)), 1) & 0.0593576 & 0.0226657 & 2.6188282 & 0.0088232\\
+\hline
+lag(c(NA, diff(pib)), 1) & -0.4222421 & 0.1603074 & -2.6339522 & 0.0084397\\
+\hline
+\end{tabular}
+
+ mce : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma2 & -0.7100167 & 0.1074261 & -6.609349 & 0.0000000\\
+\hline
+ma3 & -0.2503816 & 0.1057483 & -2.367711 & 0.0178985\\
+\hline
+intercept & -15.4777075 & 2.0757773 & -7.456343 & 0.0000000\\
+\hline
+lag(monto\_tpv\_cred, 1) & -0.5910731 & 0.0691647 & -8.545879 & 0.0000000\\
+\hline
+lag(inpc, 1) & -0.9400937 & 0.2206112 & -4.261313 & 0.0000203\\
+\hline
+lag(delictivo, 1) & -0.0163889 & 0.0163102 & -1.004826 & 0.3149805\\
+\hline
+lag(tiie, 1) & 0.0272091 & 0.0146488 & 1.857431 & 0.0632499\\
+\hline
+lag(busqueda, 1) & -0.1341780 & 0.0191696 & -6.999503 & 0.0000000\\
+\hline
+lag(pib, 1) & 1.6519486 & 0.2132559 & 7.746319 & 0.0000000\\
+\hline
+lag(c(NA, diff(monto\_tpv\_cred)), 3) & -0.1372806 & 0.0577120 & -2.378719 & 0.0173729\\
+\hline
+lag(c(NA, diff(inpc)), 1) & -2.0417301 & 0.7682044 & -2.657796 & 0.0078654\\
+\hline
+lag(c(NA, diff(pib)), 0) & 1.6459025 & 0.1728332 & 9.523067 & 0.0000000\\
+\hline
+lag(c(NA, diff(pib)), 1) & -0.6492211 & 0.1961664 & -3.309543 & 0.0009345\\
+\hline
+\end{tabular}
+
+ Comparación de modelos: 
+
+\begin{tabular}{l|r|r|r}
+\hline
+  & mdg & mdgd & mce\\
+\hline
+mdg & 0.000000 & 5.358274 & 5.949110\\
+\hline
+mdgd & 5.829420 & 0.000000 & 7.954845\\
+\hline
+mce & 5.530341 & 9.239049 & 0.000000\\
+\hline
+\end{tabular}
+ Resultados: 
+
+\begin{tabular}{l|l|l}
+\hline
+mdgd > mdg & mdg > mce & mce > mdgd\\
+\hline
+\end{tabular}

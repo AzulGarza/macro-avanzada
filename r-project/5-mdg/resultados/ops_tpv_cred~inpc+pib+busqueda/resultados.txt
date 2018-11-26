@@ -1,0 +1,20 @@
+Especificación: 
+ 
+ops_tpv_cred~inpc+pib+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & -1.6455668 & 0.7444333 & -2.210496 & 0.0270708\\
+\hline
+ops\_tpv\_cred2 & 0.7503146 & 0.0740483 & 10.132771 & 0.0000000\\
+\hline
+pib1 & 1.4409877 & 0.1768626 & 8.147497 & 0.0000000\\
+\hline
+pib2 & -1.0592525 & 0.2225759 & -4.759061 & 0.0000019\\
+\hline
+\end{tabular}

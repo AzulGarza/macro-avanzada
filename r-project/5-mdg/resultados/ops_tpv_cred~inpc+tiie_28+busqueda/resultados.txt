@@ -1,0 +1,16 @@
+Especificación: 
+ 
+ops_tpv_cred~inpc+tiie_28+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 0.7390200 & 0.3923024 & 1.883802 & 0.0595917\\
+\hline
+ops\_tpv\_cred2 & 0.9619967 & 0.0211116 & 45.567129 & 0.0000000\\
+\hline
+\end{tabular}

@@ -1,0 +1,98 @@
+Modelo: monto_spei~inpc+delictivo+tiie+busqueda+pib
+ mdg : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & -5.1885875 & 2.0509274 & -2.5298738 & 0.0114104\\
+\hline
+inpc & -3.2434450 & 0.8873320 & -3.6552779 & 0.0002569\\
+\hline
+delictivo & -0.0043504 & 0.0482325 & -0.0901959 & 0.9281315\\
+\hline
+tiie & -0.0122573 & 0.0464001 & -0.2641652 & 0.7916526\\
+\hline
+busqueda & 0.0370991 & 0.0323529 & 1.1467001 & 0.2515056\\
+\hline
+pib & 1.1840734 & 0.2484571 & 4.7657047 & 0.0000019\\
+\hline
+lag(monto\_spei, 1) & 0.4324938 & 0.0941125 & 4.5954989 & 0.0000043\\
+\hline
+lag(inpc, 4) & 2.2092036 & 1.0617639 & 2.0806919 & 0.0374621\\
+\hline
+\end{tabular}
+
+ mdgd : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & -8.6131587 & 2.0391032 & -4.2239934 & 0.0000240\\
+\hline
+inpc & -1.8514548 & 0.3444452 & -5.3751791 & 0.0000001\\
+\hline
+delictivo & -0.0207977 & 0.0472632 & -0.4400398 & 0.6599083\\
+\hline
+tiie & -0.1026600 & 0.0281134 & -3.6516418 & 0.0002606\\
+\hline
+busqueda & 0.0472449 & 0.0319308 & 1.4796015 & 0.1389796\\
+\hline
+pib & 1.7199228 & 0.2690472 & 6.3926440 & 0.0000000\\
+\hline
+lag(monto\_spei, 1) & 0.3344229 & 0.1080022 & 3.0964461 & 0.0019586\\
+\hline
+lag(c(NA, diff(pib)), 3) & 0.5125423 & 0.2281498 & 2.2465159 & 0.0246710\\
+\hline
+\end{tabular}
+
+ mce : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & -7.1174859 & 2.4105053 & -2.9526946 & 0.0031501\\
+\hline
+lag(monto\_spei, 1) & -0.7415768 & 0.1288838 & -5.7538395 & 0.0000000\\
+\hline
+lag(inpc, 1) & -1.7247024 & 0.4323487 & -3.9891468 & 0.0000663\\
+\hline
+lag(delictivo, 1) & -0.0512945 & 0.0443279 & -1.1571611 & 0.2472066\\
+\hline
+lag(tiie, 1) & -0.1148182 & 0.0296892 & -3.8673420 & 0.0001100\\
+\hline
+lag(busqueda, 1) & 0.0269965 & 0.0324553 & 0.8318051 & 0.4055190\\
+\hline
+lag(pib, 1) & 1.7022711 & 0.3543373 & 4.8040984 & 0.0000016\\
+\hline
+lag(c(NA, diff(pib)), 0) & 1.7711489 & 0.3012555 & 5.8792261 & 0.0000000\\
+\hline
+lag(c(NA, diff(pib)), 3) & 0.5665448 & 0.2703591 & 2.0955274 & 0.0361241\\
+\hline
+\end{tabular}
+
+ Comparación de modelos: 
+
+\begin{tabular}{l|r|r|r}
+\hline
+  & mdg & mdgd & mce\\
+\hline
+mdg & 0.00000 & 21.27043 & 14.41797\\
+\hline
+mdgd & 22.80974 & 0.00000 & 17.74924\\
+\hline
+mce & 16.99271 & 21.06798 & 0.00000\\
+\hline
+\end{tabular}
+ Resultados: 
+
+\begin{tabular}{l|l|l}
+\hline
+mdgd > mdg & mce > mdg & mce > mdgd\\
+\hline
+\end{tabular}

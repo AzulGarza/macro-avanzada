@@ -1,0 +1,18 @@
+Especificación: 
+ 
+ops_cheques~inpc+delictivo+pib+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma3 & 0.4521348 & 0.1271937 & 3.554694 & 0.0003784\\
+\hline
+intercept & 35.4479336 & 0.5793782 & 61.182722 & 0.0000000\\
+\hline
+pib2 & -1.0346665 & 0.0351537 & -29.432615 & 0.0000000\\
+\hline
+\end{tabular}

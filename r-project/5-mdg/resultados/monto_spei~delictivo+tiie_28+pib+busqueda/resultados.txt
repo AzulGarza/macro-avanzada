@@ -1,0 +1,20 @@
+Especificación: 
+ 
+monto_spei~delictivo+tiie_28+pib+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 0.1459012 & 0.4717958 & 0.3092466 & 0.7571339\\
+\hline
+monto\_spei2 & 0.6281827 & 0.0927509 & 6.7727966 & 0.0000000\\
+\hline
+pib1 & 1.2259348 & 0.2523948 & 4.8572112 & 0.0000012\\
+\hline
+pib3 & -0.8422267 & 0.2372896 & -3.5493615 & 0.0003862\\
+\hline
+\end{tabular}

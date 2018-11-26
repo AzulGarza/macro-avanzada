@@ -1,0 +1,112 @@
+Modelo: monto_tpv_deb~inpc+delictivo+tiie+busqueda
+ mdg : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma1 & 0.6904978 & 0.1083052 & 6.3754831 & 0.0000000\\
+\hline
+ma2 & 0.4032443 & 0.1595370 & 2.5275915 & 0.0114848\\
+\hline
+ma4 & -0.7119776 & 0.1395323 & -5.1026016 & 0.0000003\\
+\hline
+intercept & 0.5777443 & 0.6944218 & 0.8319789 & 0.4054208\\
+\hline
+inpc & -1.5621518 & 0.6035998 & -2.5880590 & 0.0096518\\
+\hline
+delictivo & -0.1167480 & 0.0514995 & -2.2669717 & 0.0233920\\
+\hline
+tiie & 0.0461949 & 0.0399225 & 1.1571167 & 0.2472247\\
+\hline
+busqueda & -0.0414579 & 0.0255791 & -1.6207715 & 0.1050666\\
+\hline
+lag(monto\_tpv\_deb, 4) & 0.8177826 & 0.0368632 & 22.1842249 & 0.0000000\\
+\hline
+lag(inpc, 3) & 2.2720066 & 0.7385567 & 3.0762794 & 0.0020960\\
+\hline
+\end{tabular}
+
+ mdgd : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma3 & -0.7138766 & 0.1835755 & -3.888735 & 0.0001008\\
+\hline
+ma4 & -0.3574630 & 0.1561208 & -2.289656 & 0.0220412\\
+\hline
+intercept & -3.6338201 & 0.5893771 & -6.165526 & 0.0000000\\
+\hline
+inpc & 4.0265694 & 0.0998627 & 40.321045 & 0.0000000\\
+\hline
+delictivo & -0.2283879 & 0.0321800 & -7.097208 & 0.0000000\\
+\hline
+tiie & -0.1383256 & 0.0435837 & -3.173794 & 0.0015046\\
+\hline
+busqueda & 0.0488246 & 0.0345583 & 1.412817 & 0.1577095\\
+\hline
+lag(c(NA, diff(monto\_tpv\_deb)), 3) & -0.3126367 & 0.0858139 & -3.643193 & 0.0002693\\
+\hline
+lag(c(NA, diff(inpc)), 1) & -5.4213861 & 1.1060536 & -4.901558 & 0.0000010\\
+\hline
+lag(c(NA, diff(tiie)), 0) & 0.4064252 & 0.1156240 & 3.515059 & 0.0004397\\
+\hline
+lag(c(NA, diff(tiie)), 3) & 0.3549277 & 0.1383364 & 2.565685 & 0.0102972\\
+\hline
+\end{tabular}
+
+ mce : 
+
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+ma1 & 0.8327331 & 0.1264314 & 6.5864432 & 0.0000000\\
+\hline
+intercept & -7.1217174 & 0.9164718 & -7.7707982 & 0.0000000\\
+\hline
+lag(monto\_tpv\_deb, 1) & -1.2698779 & 0.0718036 & -17.6854394 & 0.0000000\\
+\hline
+lag(inpc, 1) & 5.5075318 & 0.3264879 & 16.8690206 & 0.0000000\\
+\hline
+lag(delictivo, 1) & -0.2160436 & 0.0644684 & -3.3511533 & 0.0008048\\
+\hline
+lag(tiie, 1) & 0.0009933 & 0.0458394 & 0.0216682 & 0.9827126\\
+\hline
+lag(busqueda, 1) & 0.0304435 & 0.0305379 & 0.9969078 & 0.3188093\\
+\hline
+lag(c(NA, diff(monto\_tpv\_deb)), 3) & -0.2815983 & 0.0457598 & -6.1538428 & 0.0000000\\
+\hline
+lag(c(NA, diff(inpc)), 1) & -6.0334089 & 0.8603875 & -7.0124324 & 0.0000000\\
+\hline
+lag(c(NA, diff(inpc)), 2) & -6.5905957 & 0.9960201 & -6.6169304 & 0.0000000\\
+\hline
+lag(c(NA, diff(tiie)), 1) & 0.4095379 & 0.1068176 & 3.8339917 & 0.0001261\\
+\hline
+\end{tabular}
+
+ Comparación de modelos: 
+
+\begin{tabular}{l|r|r|r}
+\hline
+  & mdg & mdgd & mce\\
+\hline
+mdg & 0.000000 & 4.349863 & 6.309545\\
+\hline
+mdgd & 3.896560 & 0.000000 & 7.452997\\
+\hline
+mce & 4.452222 & 8.128403 & 0.000000\\
+\hline
+\end{tabular}
+ Resultados: 
+
+\begin{tabular}{l|l|l}
+\hline
+mdg > mdgd & mdg > mce & mce > mdgd\\
+\hline
+\end{tabular}

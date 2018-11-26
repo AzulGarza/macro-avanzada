@@ -1,0 +1,18 @@
+Especificación: 
+ 
+monto_cheques~inpc+delictivo+tiie_28+pib+busqueda 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & 18.040809 & 0.2873137 & 62.791332 & 0.000000\\
+\hline
+inpc1 & 4.488580 & 1.3021920 & 3.446942 & 0.000567\\
+\hline
+inpc2 & -5.288291 & 1.3038769 & -4.055821 & 0.000050\\
+\hline
+\end{tabular}

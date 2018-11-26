@@ -1,0 +1,16 @@
+Especificación: 
+ 
+monto_tpv_deb~inpc+tiie_28 
+ 
+Resultados: 
+ 
+
+\begin{tabular}{l|r|r|r|r}
+\hline
+term & estimate & std.error & statistic & p.value\\
+\hline
+intercept & -8.398891 & 0.3653163 & -22.99074 & 0\\
+\hline
+inpc1 & 4.571565 & 0.0844698 & 54.12067 & 0\\
+\hline
+\end{tabular}

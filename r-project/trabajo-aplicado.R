@@ -232,7 +232,7 @@ crear_arma <- function(nombre_serie){
   
   dev.off()
   
-  # Si el modelo es 0 entonces se acaba
+    # Si el modelo es 0 entonces se acaba
   if(sum(arma_order) < 1){
     return(NULL)
   }
